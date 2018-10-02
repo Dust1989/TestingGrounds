@@ -102,7 +102,6 @@ void AFirstPersonCharacter::BeginPlay()
 	{
 		FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 		FP_Gun->SetOwner(this);
-		FP_Gun->AnimInstance = Mesh1P->GetAnimInstance();
 	}
 }
 
