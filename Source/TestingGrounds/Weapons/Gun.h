@@ -15,8 +15,9 @@ class TESTINGGROUNDS_API AGun : public AActor
 	UPROPERTY(VisibleDefaultsOnly, Category = "Mesh")
 	class USkeletalMeshComponent* FP_Gun;
 
+protected:
 	/** Location on gun mesh where projectiles should spawn. */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Mesh)
 	class USceneComponent* FP_MuzzleLocation;
 	
 public:	
