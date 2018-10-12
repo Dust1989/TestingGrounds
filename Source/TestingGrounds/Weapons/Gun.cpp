@@ -6,6 +6,7 @@
 #include "Animation/AnimInstance.h"
 #include "Animation/AnimMontage.h"
 #include "Kismet/GameplayStatics.h"
+#include "Character/Mannequin.h"
 
 // Sets default values
 AGun::AGun()
@@ -74,11 +75,19 @@ void AGun::OnFire()
 
 
 	// try and play a firing animation if specified
-	if (FireAnimation != NULL)
+	if (FireAnimation1P != NULL)
 	{
-		if (AnimInstance != NULL)
+		if (AnimInstance1P != NULL)
 		{
-			AnimInstance->Montage_Play(FireAnimation, 1.f);
+			AnimInstance1P->Montage_Play(FireAnimation1P, 1.f);
+		}
+	}
+
+	if (FireAnimation3P != NULL)
+	{
+		if (AnimInstance3P != NULL)
+		{
+			AnimInstance3P->Montage_Play(FireAnimation3P, 1.f);
 		}
 	}
 	
