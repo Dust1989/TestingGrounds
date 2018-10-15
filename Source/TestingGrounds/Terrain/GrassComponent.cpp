@@ -8,6 +8,7 @@
 void UGrassComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
 	SpawnGrass();
 }
 
